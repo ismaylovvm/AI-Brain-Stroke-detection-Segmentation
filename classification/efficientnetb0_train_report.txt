@@ -1,0 +1,10 @@
+DICOM images with and without stroke findings were organized into two separate folders. The images were read using the pydicom library and converted to Hounsfield Units (HU). Each image was resized to 224×224 pixels to match the input requirements of the model architecture. Images indicating stroke presence were labeled as “1,” while those without were labeled as “0.” Corresponding arrays for images and labels were created, and the dataset was split into training and testing sets in an 80%-20% ratio using stratified sampling to maintain class balance.
+
+To mitigate overfitting and enhance data diversity, data augmentation techniques were applied to the training set, including 10% zoom, horizontal and vertical flipping, 10% horizontal and vertical translation, 10% contrast adjustment, and random rotation. Pixel intensity values were normalized to the range [0, 1].
+
+The model’s base was constructed using the EfficientNetB0 architecture from Keras applications. The fully connected layers included global average pooling, batch normalization, and dropout with a rate of 0.3. The output layer consisted of a single neuron with a sigmoid activation function to perform binary classification.
+
+The model was compiled with an initial learning rate of 1×10⁻³ using the Adam optimizer, binary cross-entropy as the loss function, and accuracy and AUC as evaluation metrics. Training was conducted with a batch size of 32 and a validation split of 20%.
+
+Following initial training, the final 50 layers of the model were unfrozen for fine-tuning. The learning rate was reduced to 1×10⁻⁴, and the model was retrained. Performance was assessed using accuracy, AUC, ROC curve analysis, and F1 score. The optimal model threshold was set at 0.5 for evaluation on the test dataset.
+

@@ -1,0 +1,3 @@
+F1 SKOR = 0.8 
+
+The pixel value for the hemorrhage area is set to 2, and the pixel value for the ischemia area is set to 1.
