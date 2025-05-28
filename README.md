@@ -10,7 +10,7 @@
 * [Features](#features)
 * [Architecture](#architecture)
 * [Installation](#installation)
-* [Note on Environment (Google Colab)](#NoteonEnvironment (Google Colab))
+* [Note_on_Environment_(Google_Colab)](#Note_on_Environment_(Google_Colab))
 * [Usage](#usage)
 
   * [Classification](#classification)
@@ -75,7 +75,7 @@ graph LR
    pip install -r requirements.txt
    ```
 
-## ⚠️ Note on Environment (Google Colab)
+## ⚠️ Note_on_Environment_(Google_Colab)
 
 > 🔧 **This project was primarily developed and tested on [Google Colab](https://colab.research.google.com/)**.
 
