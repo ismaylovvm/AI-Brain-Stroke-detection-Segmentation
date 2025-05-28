@@ -10,7 +10,6 @@
 * [Overview](#overview)
 * [Features](#features)
 * [Architecture](#architecture)
-* [Dataset](#dataset)
 * [Installation](#installation)
 * [Usage](#usage)
 
@@ -55,17 +54,7 @@ graph LR
     E & F --> G[Results & Visualizations]
 ```
 
-## Dataset
 
-* **Source**: Publicly available stroke CT/MRI datasets (e.g., ISLES, ATLAS).
-* **Structure**:
-
-  ```
-  dataset/
-  ├── images/        # Raw DICOM or NIfTI files
-  ├── masks/         # Ground truth segmentation masks
-  └── labels.csv     # CSV with classification labels
-  ```
 * **Preprocessing**: Automatic window-level adjustments, resizing to 224×224 for classification, 256×256 for segmentation.
 
 ## Installation
@@ -172,6 +161,7 @@ python inference/run_inference.py \
 
   * Dice Coefficient: 0.88
   * IoU: 0.83
+  * F1: 0.8
 
 Results and visualizations are saved under the `results/` directory for further analysis.
 
@@ -216,17 +206,11 @@ Please ensure that code is PEP8 compliant and includes appropriate tests.
 
 This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
-## About the Author
-
-**Vugar Ismaylov** is a biomedical engineer and AI researcher specializing in medical image analysis and deep learning. He holds a Master's degree in Biomedical Engineering from XYZ University and has published several papers on stroke lesion detection and segmentation techniques in peer-reviewed journals. Currently, Vugar leads research projects focused on developing AI-driven diagnostic tools in clinical settings.
-
 ## Contact
 
 For questions or suggestions, please open an issue or reach out directly:
 
 * **GitHub**: [ismaylovvm](https://github.com/ismaylovvm)
-* **Email**: [vugar.ismaylov@example.com](mailto:vugar.ismaylov@example.com)
+* **Email**: [ismaylovv.m@gmail.com](ismaylovv.m@gmail.com)
 
----
 
-*Generated with ❤️ for advanced AI-based stroke detection and segmentation.*
