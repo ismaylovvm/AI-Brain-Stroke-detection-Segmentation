@@ -1,6 +1,5 @@
 # AI Brain Stroke Detection and Segmentation
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/tensorflow-2.x-orange)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.x-red)
@@ -20,7 +19,6 @@
 * [Directory Structure](#directory-structure)
 * [Dependencies](#dependencies)
 * [Contributing](#contributing)
-* [License](#license)
 * [Contact](#contact)
 
 ## Overview
@@ -148,9 +146,7 @@ Contributions are welcome! Please follow these steps:
 
 Please ensure that code is PEP8 compliant and includes appropriate tests.
 
-## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
 
 ## Contact
 
