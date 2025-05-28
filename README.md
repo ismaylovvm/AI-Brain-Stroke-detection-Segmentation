@@ -13,10 +13,9 @@
 * [Installation](#installation)
 * [Usage](#usage)
 
-  * [Data Preprocessing](#data-preprocessing)
   * [Classification](#classification)
   * [Segmentation](#segmentation)
-  * [Inference](#inference)
+    
 * [Evaluation & Results](#evaluation--results)
 * [Directory Structure](#directory-structure)
 * [Dependencies](#dependencies)
@@ -44,7 +43,7 @@ The goal is to provide an end-to-end solution covering data ingestion, preproces
 
 ## Architecture
 
-```mermaid
+```
 graph LR
     A[Raw DICOM/CT Data] --> B[Preprocessing]
     B --> C[Classification (EfficientNet)]
@@ -77,42 +76,16 @@ graph LR
    pip install -r requirements.txt
    ```
 
-## Usage
-
-### Data Preprocessing
-
-Preprocess raw scans:
-
-```bash
-python image_processing/preprocess.py \
-    --input_dir dataset/images \
-    --output_dir processed/images \
-    --mask_dir dataset/masks \
-    --img_size 224
-```
-
 ### Classification
 
 Train EfficientNet classifier:
 
 ```bash
 python classification/train_classifier.py \
-    --data_dir processed/images \
-    --labels dataset/labels.csv \
-    --model efficientnet-b4 \
-    --epochs 50 \
+    --model efficientnet-b0 \
+    --epochs 30 \
     --batch_size 16 \
     --output_dir classification/models
-```
-
-Evaluate classifier:
-
-```bash
-python classification/evaluate_classifier.py \
-    --model_path classification/models/best_model.h5 \
-    --test_data processed/test \
-    --labels test_labels.csv \
-    --metrics_out classification/results/classification_metrics.json
 ```
 
 ### Segmentation
@@ -121,34 +94,9 @@ Train U-Net segmentation model:
 
 ```bash
 python segmentation/train_unet.py \
-    --images processed/images \
-    --masks processed/masks \
-    --epochs 100 \
+    --epochs 20 \
     --batch_size 8 \
     --output_dir segmentation/models
-```
-
-Evaluate segmentation:
-
-```bash
-python segmentation/evaluate_unet.py \
-    --model_path segmentation/models/unet_best.pt \
-    --test_images processed/test/images \
-    --test_masks processed/test/masks \
-    --metrics_out segmentation/results/segmentation_metrics.json
-```
-
-### Inference
-
-Run end-to-end inference:
-
-```bash
-python inference/run_inference.py \
-    --classifier_path classification/models/best_model.h5 \
-    --segmenter_path segmentation/models/unet_best.pt \
-    --input_dir new_scans/ \
-    --output_dir predictions/ \
-    --threshold 0.5
 ```
 
 ## Evaluation & Results
@@ -173,11 +121,9 @@ AI-Brain-stroke-detection/
 ├── segmentation/        # Segmentation scripts and models
 ├── image_processing/    # Data loading and preprocessing utilities
 ├── results/             # Metrics and sample visualizations
-├── inference/           # Inference pipeline
 ├── requirements.txt     # Project dependencies
 └── README.md            # This file
 ```
-
 ## Dependencies
 
 Key libraries and frameworks:
