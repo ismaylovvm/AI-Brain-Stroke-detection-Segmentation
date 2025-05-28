@@ -10,6 +10,7 @@
 * [Features](#features)
 * [Architecture](#architecture)
 * [Installation](#installation)
+* [Note on Environment (Google Colab)](#NoteonEnvironment (Google Colab))
 * [Usage](#usage)
 
   * [Classification](#classification)
@@ -73,6 +74,23 @@ graph LR
    ```bash
    pip install -r requirements.txt
    ```
+
+## ⚠️ Note on Environment (Google Colab)
+
+> 🔧 **This project was primarily developed and tested on [Google Colab](https://colab.research.google.com/)**.
+
+If you're running the code outside of Colab (e.g., locally or on a server), be aware of the following:
+
+- File paths (e.g., `/content/drive/...`) must be adjusted.
+- `Google Drive` mounting (`from google.colab import drive`) should be removed or replaced.
+- GPU runtime settings should be configured manually (e.g., CUDA setup).
+- Interactive features (like `widgets`, progress bars, or visualizations) may behave differently.
+- Installations using `!pip` in notebooks should be moved to `requirements.txt` or your environment setup script.
+
+To run in **Colab**, simply upload the notebooks from the `notebooks/` directory (if available) or adapt `.py` scripts to cells in a new notebook.
+
+
+
 ## Usage
 
 ### Classification
