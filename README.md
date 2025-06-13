@@ -4,7 +4,7 @@
 ![TensorFlow](https://img.shields.io/badge/tensorflow-2.x-orange)
 ![PyTorch](https://img.shields.io/badge/pytorch-1.x-red) 
 
-## Table of Contents
+## Table of Contents 
 
 * [Overview](#overview)
 * [Features](#features)
