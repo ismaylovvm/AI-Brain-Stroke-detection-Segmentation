@@ -2,7 +2,7 @@
 
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/tensorflow-2.x-orange)
-![PyTorch](https://img.shields.io/badge/pytorch-1.x-red)
+![PyTorch](https://img.shields.io/badge/pytorch-1.x-red) 
 
 ## Table of Contents
 
