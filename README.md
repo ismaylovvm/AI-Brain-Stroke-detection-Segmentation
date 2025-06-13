@@ -1,4 +1,4 @@
-# AI Brain Stroke Detection and Segmentation
+# AI Brain Stroke Detection and Segmentation 
 
 ![Python](https://img.shields.io/badge/python-3.7%2B-blue)
 ![TensorFlow](https://img.shields.io/badge/tensorflow-2.x-orange)
