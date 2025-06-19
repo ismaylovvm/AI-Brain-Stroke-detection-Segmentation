@@ -1,3 +1,0 @@
-The DICOM files were read using the pydicom library for the purpose of medical image processing. The pixel intensity values were converted into Hounsfield Units (HU) using the apply_modality_lut method. These HU values were then normalized through a windowing process within a specific intensity range to enhance the contrast of the images.
-
-The processed images were converted into 3-channel RGB format to meet the input requirements of the model architectures. To further enhance image details, contrast improvement was applied using the CLAHE (Contrast Limited Adaptive Histogram Equalization) technique. Finally, the images were resized to 256×256 pixels using OpenCV's resize method to match the required input size of the model.
